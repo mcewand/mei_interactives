@@ -1,0 +1,43 @@
+<?php
+
+//@todo - simple configuration menu to specify 'interactive' content types
+
+
+/**
+ * Implements hook_theme_registry_alter()
+ * Want to provide theming tpls here, rather than just in the theme
+ */
+function mei_interactives_theme_registry_alter(&$theme_registry) {
+  $mod_path = drupal_get_path('module', 'mei_interactives');
+  $theme_registry_copy = $theme_registry;       // munge on a copy
+  _theme_process_registry($theme_registry_copy, 'phptemplate', 'theme_engine', 'pow', $mod_path);
+  $theme_registry += array_diff_key($theme_registry_copy, $theme_registry);
+  $hooks = array('node');
+  foreach ($hooks as $h) {
+    _mei_interactives_insert_after_first_element($theme_registry[$h]['theme paths'], $mod_path);
+  }
+}
+
+/**
+ * Helper function for re-ordering arrays (needed by theme_registry_alter)
+ */
+function _mei_interactives_insert_after_first_element(&$a, $element) {
+  if(is_array($a)) {
+    $first_element = array_shift($a);
+    array_unshift($a, $first_element, $element);
+  }
+}
+
+/**
+ * Implementation of hook_preproccess().
+ */
+
+function mei_interactives_preprocess_page(&$vars) {
+  //Check for content types that are specified as interactives
+  
+
+  //add specialized tpl for the interactive
+ 
+}
+
+

@@ -1,0 +1,15 @@
+<?php
+/**
+ * @file
+ * Code for the MEI Social Forces feature.
+ */
+
+include_once 'mei_social_forces.features.inc';
+
+function mei_social_forces_preprocess_views_view(&$vars) {
+  if ($vars['name'] == 'social_forces'){
+    drupal_add_js(drupal_get_path('module', 'mei_social_forces') . '/js/slide-up.js');
+    drupal_add_css(drupal_get_path('module', 'mei_social_forces') . '/css/social-forces.css');
+//   dpm($vars);
+  }
+}

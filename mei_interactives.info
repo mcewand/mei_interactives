@@ -1,0 +1,4 @@
+name = MEI Interactives
+description = A helper module for various Interactives content types for the Middle East Institute
+package = MEI Interactives
+core = 7.x

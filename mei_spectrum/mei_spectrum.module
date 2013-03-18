@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the MEI Spectrum feature.
+ */
+
+include_once 'mei_spectrum.features.inc';

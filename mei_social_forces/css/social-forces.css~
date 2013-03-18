@@ -1,0 +1,111 @@
+.view-id-social_forces .container {
+  background:none;
+  padding:0;
+  margin:10px;
+  height: 225px;
+  float:left;
+  position: relative;
+  overflow: hidden;
+}
+
+.view-id-social_forces img {
+  float: left;
+}
+
+.view-id-social_forces .target {
+  position:absolute;
+  margin-top: 225px;
+  padding: 30px 10px;
+  height: 200px;
+ /* width: 100%;*/
+  background: #FFF;
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+  cursor: hand; 
+  cursor: pointer; 
+}
+
+.view-id-social_forces .target a {
+  text-decoration: none;
+}
+
+.view-id-social_forces ul {
+  padding: 0px;
+  list-style-type: none
+}
+
+#lightbox2-overlay {
+}
+
+#lightbox #modalContainer {
+  background: #FFF url(http://www.mei.edu/sites/default/themes/mei/img/bg-page-pattern-top.jpg) repeat-x;
+  /*border-top: 15px solid #daceba;*/ 
+  -moz-box-shadow: inset 0 0 20px #000;
+  -webkit-box-shadow: inset 0 0 20px #000;
+  box-shadow: inset 0 0 20px #000;
+}
+
+#lightbox h2 {
+  border-bottom: 2px solid #007c99;
+  padding: 5px;
+  margin: 0px;
+}
+
+#lightbox .gallery {
+  float:left;
+  margin-top: 10px;
+  width: 40%; 
+}
+
+#lightbox .gallery img {
+  -moz-box-shadow: 3px 3px 4px #000;
+  -webkit-box-shadow: 3px 3px 4px #000;
+  box-shadow: 3px 3px 4px #000;
+  /* For IE 8 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
+  /* For IE 5.5 - 7 */
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
+  background: #fff;
+}
+
+#lightbox .right {
+  float:left;
+  margin-top: 10px;
+  width: 50%;
+  text-align: left;
+  padding: 8px;
+  background: #FFF;
+  max-height: 179px;
+}
+
+#lightbox .right ul {
+  padding: 5px 0 0 0;
+  margin: 0;
+  list-style-type: none
+}
+
+#lightbox .right ul li {
+  padding: 3px 0;
+}
+
+#lightbox .right span.label {
+  font-weight: bold;
+  font-size: 75%;
+  text-transform: uppercase;
+  /*color: #007c99;*/
+  color: #b63500;
+}
+
+#lightbox .lower {
+  float: left;
+  height: 185px;
+  padding: 10px 20px 0 20px;
+  text-align: left;
+  overflow: auto;
+  -webkit-mask-image: -webkit-gradient(linear, left 10%, left top, from(rgba(0,0,0,1)), to(rgba(0,0,0,0))); 
+}
+
+#lightbox .lower .description {
+  padding: 10px 0;
+}
+

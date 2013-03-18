@@ -12,6 +12,7 @@ dependencies[] = field_collection
 dependencies[] = field_group
 dependencies[] = image
 dependencies[] = link
+dependencies[] = mei_interactives
 dependencies[] = number
 dependencies[] = strongarm
 dependencies[] = taxonomy

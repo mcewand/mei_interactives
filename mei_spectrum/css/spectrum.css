@@ -1,0 +1,116 @@
+
+.view-political-parties .view-content {
+  position:relative;
+}
+
+.view-political-parties .spectrum-background {
+  width: 100%;
+  position: relative;
+  height: 150px;
+  border-bottom:4px solid #000;
+  background: #FFF url(http://www.mei.edu/sites/default/themes/mei/img/bg-page-pattern-top.jpg) repeat-x;
+
+}
+
+.spectrum-background .left-label {
+  float: left;
+  margin-top: 130px;
+  color: #000;
+}
+
+.spectrum-background .right-label {
+  float: right;
+  margin-top: 130px;
+  color: #000;
+}
+
+.spectrum-background .axis {
+  height: 10px;
+  margin:135px 0 0 11%;
+  position:absolute;
+  width: 75%;
+  background-image: -ms-linear-gradient(left, #0009FF 0%, #009900 100%); 
+  background-image: -moz-linear-gradient(left, #0009FF 0%, #009900 100%);
+  background-image: -o-linear-gradient(left, #0009FF 0%, #009900 100%);
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #0009FF), color-stop(1, #FF0000));
+  background-image: -webkit-linear-gradient(left, #0009FF 0%, #009900 100%);
+  background-image: linear-gradient(to right, #0009FF 0%, #009900 100%);
+}
+
+.view-political-parties .point {
+  float: left;
+  position:absolute;
+  margin-top: 10px;
+  width: 75px;
+  text-align: center;
+  display: none;
+  cursor: hand; 
+  cursor: pointer;
+  z-index: 2;
+}
+
+.view-political-parties .spectrum-main {
+  float:left;
+  width: 60%;
+  padding: 8px;
+}
+
+.view-political-parties .blockout {
+  float: right;
+  /*width: 230px;*/
+  border: 2px solid #F0F0F5;
+  border-radius: 8px;
+  padding: 10px;
+  margin-left: 10px;
+  text-align:center;  
+}
+
+.founded .label {
+  font-weight:bold;
+}
+
+.view-political-parties .spectrum-right {
+  float:left;
+  width:35%;
+  padding: 8px;
+}
+
+.view-political-parties .spectrum-right .accordion {
+  border: 1px solid #F1F2F4;
+  padding: 9px;
+}
+
+.view-political-parties .spectrum-right .accordion > div {
+  border-bottom: 2px dashed #F1F2F4;
+  padding: 9px;
+}
+
+.view-political-parties .spectrum-right h3 {
+  /*background: #007c99;*/
+  border-bottom: 1px solid #F1F2F4;
+  padding: 2px;
+  margin:1px 0;
+  cursor: hand; 
+  cursor: pointer;
+}
+
+.view-political-parties .spectrum-right ul {
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+}
+.view-political-parties .spectrum-right li {
+  padding: 4px;
+}
+
+.view-political-parties .spectrum-right li:nth-child(odd) {
+   background-color: #F0F0F5;
+}
+
+
+}
+
+
+
+
+

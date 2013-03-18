@@ -9,6 +9,7 @@ dependencies[] = features
 dependencies[] = field_group
 dependencies[] = image
 dependencies[] = link
+dependencies[] = mei_interactives
 dependencies[] = strongarm
 dependencies[] = text
 dependencies[] = views

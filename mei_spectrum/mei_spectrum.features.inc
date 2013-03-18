@@ -26,6 +26,81 @@ function mei_spectrum_views_api() {
 }
 
 /**
+ * Implements hook_image_default_styles().
+ */
+function mei_spectrum_image_default_styles() {
+  $styles = array();
+
+  // Exported image style: pp_figure.
+  $styles['pp_figure'] = array(
+    'name' => 'pp_figure',
+    'effects' => array(
+      5 => array(
+        'label' => 'Scale and crop',
+        'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
+        'effect callback' => 'image_scale_and_crop_effect',
+        'dimensions callback' => 'image_resize_dimensions',
+        'form callback' => 'image_resize_form',
+        'summary theme' => 'image_resize_summary',
+        'module' => 'image',
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => '120',
+          'height' => '120',
+        ),
+        'weight' => '1',
+      ),
+    ),
+  );
+
+  // Exported image style: pp_main.
+  $styles['pp_main'] = array(
+    'name' => 'pp_main',
+    'effects' => array(
+      4 => array(
+        'label' => 'Scale and crop',
+        'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
+        'effect callback' => 'image_scale_and_crop_effect',
+        'dimensions callback' => 'image_resize_dimensions',
+        'form callback' => 'image_resize_form',
+        'summary theme' => 'image_resize_summary',
+        'module' => 'image',
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => '200',
+          'height' => '200',
+        ),
+        'weight' => '1',
+      ),
+    ),
+  );
+
+  // Exported image style: pp_spectrum.
+  $styles['pp_spectrum'] = array(
+    'name' => 'pp_spectrum',
+    'effects' => array(
+      3 => array(
+        'label' => 'Scale and crop',
+        'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
+        'effect callback' => 'image_scale_and_crop_effect',
+        'dimensions callback' => 'image_resize_dimensions',
+        'form callback' => 'image_resize_form',
+        'summary theme' => 'image_resize_summary',
+        'module' => 'image',
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => '75',
+          'height' => '75',
+        ),
+        'weight' => '1',
+      ),
+    ),
+  );
+
+  return $styles;
+}
+
+/**
  * Implements hook_node_info().
  */
 function mei_spectrum_node_info() {

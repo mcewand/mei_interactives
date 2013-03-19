@@ -31,7 +31,7 @@ function mei_spectrum_views_default_views() {
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['style_options']['row_class'] = 'point [field_pp_weight]-w [nid]-nid';
+  $handler->display->display_options['style_options']['row_class'] = 'point [field_pp_weight]-w [nid]-nid [field_pp_coalitions]-tid';
   $handler->display->display_options['style_options']['default_row_class'] = FALSE;
   $handler->display->display_options['style_options']['row_class_special'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
@@ -79,6 +79,19 @@ function mei_spectrum_views_default_views() {
   $handler->display->display_options['fields']['nid']['label'] = '';
   $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
+  /* Field: Content: Coalitions */
+  $handler->display->display_options['fields']['field_pp_coalitions']['id'] = 'field_pp_coalitions';
+  $handler->display->display_options['fields']['field_pp_coalitions']['table'] = 'field_data_field_pp_coalitions';
+  $handler->display->display_options['fields']['field_pp_coalitions']['field'] = 'field_pp_coalitions';
+  $handler->display->display_options['fields']['field_pp_coalitions']['label'] = '';
+  $handler->display->display_options['fields']['field_pp_coalitions']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_pp_coalitions']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_pp_coalitions']['type'] = 'entityreference_entity_id';
+  $handler->display->display_options['fields']['field_pp_coalitions']['settings'] = array(
+    'link' => 0,
+  );
+  $handler->display->display_options['fields']['field_pp_coalitions']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_pp_coalitions']['separator'] = ' ';
   /* Sort criterion: Content: Spectrum Position (field_pp_weight) */
   $handler->display->display_options['sorts']['field_pp_weight_value']['id'] = 'field_pp_weight_value';
   $handler->display->display_options['sorts']['field_pp_weight_value']['table'] = 'field_data_field_pp_weight';

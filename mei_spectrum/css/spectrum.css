@@ -3,6 +3,12 @@
   position:relative;
 }
 
+.view-political-parties .spectrum-helper {
+  font-size: 10px;
+  font-style:italic;
+
+}
+
 .view-political-parties .spectrum-background {
   width: 100%;
   position: relative;
@@ -28,7 +34,7 @@
   height: 10px;
   margin:135px 0 0 11%;
   position:absolute;
-  width: 75%;
+  width: 74%;
   background-image: -ms-linear-gradient(left, #0009FF 0%, #009900 100%); 
   background-image: -moz-linear-gradient(left, #0009FF 0%, #009900 100%);
   background-image: -o-linear-gradient(left, #0009FF 0%, #009900 100%);
@@ -47,6 +53,20 @@
   cursor: hand; 
   cursor: pointer;
   z-index: 2;
+}
+
+.view-political-parties #coalitions span {
+  width: 100px;
+  text-align:center;  
+  padding: 3px 15px;
+  border: 0 1px 1px 1px solid #F1F2F4; 
+  border-radius: 6px; 
+  cursor: hand; 
+  cursor: pointer;
+}
+
+.view-political-parties #coalitions span.active {
+  background: #F1F2F4;
 }
 
 .view-political-parties .spectrum-main {

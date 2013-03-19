@@ -28,9 +28,30 @@
                 }
                 
                 
-              return false;
+                return false;
             });
         });
+        
+        //coalition checkbox handler
+        $(function(){
+            $('.view-political-parties #coalitions span').click(function() {
+                $(this).addClass('active').css({opacity: 1});
+                //dim all others
+                $('#coalitions span').not($(this)).removeClass('active').css({opacity: .6});
+                             
+                var target = $(this).attr('id');
+                if (target == "coalition-all") {
+                    $('.point').animate({"opacity": "1"},700).show();                
+                } else {
+                  $('.' + target).animate({"opacity": "1"},700).show();
+                  $('.point').not('.' + target).animate({"opacity": ".1"},700).hide();
+                }
+                
+            });
+        });
+
+
+
 
         // accordion handler for issues, quotes, and key figures
         $(function(){
@@ -45,7 +66,7 @@
                    $target.addClass('active').slideDown();
                 }
                 
-              return false;
+                return false;
             });
         });
         $(function(){

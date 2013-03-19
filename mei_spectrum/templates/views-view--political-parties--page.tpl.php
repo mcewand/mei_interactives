@@ -16,13 +16,7 @@
       <?php print $header; ?>
     </div>
   <?php endif; ?>
-
-  <?php if ($exposed): ?>
-    <div class="view-filters">
-      <?php print $exposed; ?>
-    </div>
-  <?php endif; ?>
-
+  <div class="spectrum-helper">Click on a logo to learn more</div>
   <?php if ($rows): ?>
     <div class="view-content">
       <?php print $rows; ?>
@@ -36,6 +30,12 @@
     <div class="left-label">Secular Liberal</div>
     <div class="right-label">Conservative Islamist</div>
     <div class="axis"></div>
+  </div>
+  <div id="coalitions">
+    Click to limit by coalition: <span id="coalition-all" class="active">All Parties</span>
+    <?php foreach ($coalitions as $coalition): ?>
+      <span id="<?php print $coalition['tid']; ?>-tid" class="filter"><?php print $coalition['name']; ?></span>
+    <?php endforeach; ?>
   </div>
   
 
@@ -64,7 +64,7 @@
           </div>
 
           <?php if (isset($full['quotes'])): ?>
-            <h2>Quotatable</h2> 
+            <h2>Quotable</h2> 
             <div class='quotes'>
               <?php foreach ($full['quotes'] as $quote): ?>
                 <h3><?php print $quote['author']; ?></h3>

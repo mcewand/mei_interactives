@@ -12,7 +12,17 @@ function mei_spectrum_preprocess_views_view(&$vars) {
   if ($vars['name'] == 'political_parties'){
     drupal_add_js(drupal_get_path('module', 'mei_spectrum') . '/js/spectrum.js');
     drupal_add_css(drupal_get_path('module', 'mei_spectrum') . '/css/spectrum.css');
-    
+
+    //add coalition highlighter    
+    $coalitions_vid = taxonomy_vocabulary_machine_name_load('spectrum_coalitions');
+    $coalitions = taxonomy_get_tree($coalitions_vid->vid);
+    foreach ($coalitions as $coalition) {
+      $vars['coalitions'][] = array(
+        'name' => $coalition->name,
+        'tid' => $coalition->tid,
+      );
+    }
+
     //get list of field collection fields
     $data = field_info_instances('node','political_party');
     $collections = array();    

@@ -12,4 +12,10 @@ function mei_social_forces_preprocess_views_view(&$vars) {
     drupal_add_css(drupal_get_path('module', 'mei_social_forces') . '/css/social-forces.css');
 //   dpm($vars);
   }
+
+  if ($vars['name'] == 'social_forces2'){
+    drupal_add_js(drupal_get_path('module', 'mei_social_forces') . '/js/social-forces.js');
+    drupal_add_css(drupal_get_path('module', 'mei_social_forces') . '/css/social-forces2.css');
+  // dpm($vars);
+  }
 }

@@ -7,7 +7,6 @@
 
         elements = $('.view-political-parties .view-content').children();
         elements.each( function () {
-            //console.log($(this).attr("class"));
             pos = $(this).attr("class")
             distance = parseInt(pos.match(/(\d+(?=\-[w]))/g));
             $(this).animate({"margin-left":distance + "%"}, 4000);
@@ -50,12 +49,8 @@
             });
         });
 
-
-
-
         // accordion handler for issues, quotes, and key figures
         $(function(){
-            //var allPanels = $('.accordion > ul').hide();
             var allPanels = $('.accordion > div').hide();
             $('.accordion > h3').click(function() {
                 $this = $(this);

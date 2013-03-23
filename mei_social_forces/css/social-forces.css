@@ -1,98 +1,85 @@
-.view-id-social_forces .container {
+.view-id-social_forces2 .container {
   background:none;
-  padding:0;
-  margin:10px;
-  height: 225px;
+  padding:5px;
+  margin:5px;
+  height: 160px;
   float:left;
   position: relative;
   overflow: hidden;
+  border: 1px solid #F1F2F4;;
+  border-radius: 5px;
 }
 
-.view-id-social_forces img {
+.view-id-social_forces2 .clickActive .target {
+  margin-top: 25px;
+}
+
+.view-id-social_forces2 .container img {
   float: left;
 }
 
-.view-id-social_forces .target {
+.view-id-social_forces2 .target {
   position:absolute;
-  margin-top: 225px;
+  margin-top: 145px;
   padding: 30px 10px;
-  height: 200px;
- /* width: 100%;*/
+  height: 130px;
+  width: 140px;
+  text-align:center;
   background: #FFF;
-  opacity: 0.8;
-  filter: alpha(opacity=80);
+  opacity: 0.9;
+  filter: alpha(opacity=90);
   cursor: hand; 
   cursor: pointer; 
 }
 
-.view-id-social_forces .target a {
+.view-id-social_forces2 .target a {
   text-decoration: none;
 }
 
-.view-id-social_forces ul {
+.view-id-social_forces2 ul {
   padding: 0px;
   list-style-type: none
 }
 
-#lightbox #imageDataContainer {
-  -moz-box-shadow: inset -8px -9px 20px -10px #000;
-  -webkit-box-shadow: inset -8px -9px 20px -10px #000;
-  box-shadow: inset -8px -9px 20px -10px #000;
+#sf-full-1 {
+  display:none;
+  height: 0px;
+  padding: 10px;
+  margin:15px 5px;
+  overflow: auto;
+  border: 1px solid #F1F2F4;
+  border-radius: 3px;
+  -moz-box-shadow: inset 0px 0px 6px 4px #909090;
+  -webkit-box-shadow: inset 0px 0px 6px 4px #909090;
+  box-shadow: inset 0px 0px 6px 4px #909090;
+  background: url("../../assets/watermark2.png") 100% 30px no-repeat;
+  
 }
 
-
-#lightbox #modalContainer {
-  background: #FFF url(http://www.mei.edu/sites/default/themes/mei/img/bg-page-pattern-top.jpg) repeat-x;
-  /*border-top: 15px solid #daceba;*/
-  -moz-box-shadow: inset -8px 9px 20px -10px #000;
-  -webkit-box-shadow: inset -8px 9px 20px -10px #000;
-  box-shadow: inset -8px 9px 20px -10px #000;
+#sf-full-1 #inner {
+  height: 375px;
+  overflow: auto;
 }
 
-#lightbox h2 {
-  border-bottom: 2px solid #007c99;
-  padding: 5px;
-  margin: 0px;
+#sf-full-1 .sf-close {
+  margin-left: 95%;  
+  cursor: hand; 
+  cursor: pointer; 
 }
 
-#lightbox .gallery {
-  float:left;
-  margin-top: 10px;
-  width: 40%; 
+#sf-full-1 .left {
+  float: left;
+  width: 36%;
+  padding: 10px;
 }
 
-#lightbox .gallery img {
-  -moz-box-shadow: 3px 3px 4px #000;
-  -webkit-box-shadow: 3px 3px 4px #000;
-  box-shadow: 3px 3px 4px #000;
-  /* For IE 8 */
-    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
-  /* For IE 5.5 - 7 */
-    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
-  background: #fff;
+#sf-full-1 .right {
+  float: left;
+  width: 56%;
+  padding: 10px;
 }
 
-#lightbox .right {
-  float:left;
-  margin-top: 10px;
-  width: 50%;
-  text-align: left;
-  padding: 8px;
-  background: #FFF;
-  max-height: 179px;
-}
-
-#lightbox .right ul {
-  padding: 5px 0 0 0;
-  margin: 0;
-  list-style-type: none
-}
-
-#lightbox .right ul li {
-  padding: 3px 0;
-}
-
-#lightbox .right span.label {
+#sf-full-1 .left span {
   font-weight: bold;
   font-size: 75%;
   text-transform: uppercase;
@@ -100,16 +87,39 @@
   color: #b63500;
 }
 
-#lightbox .lower {
-  float: left;
-  height: 185px;
-  padding: 10px 20px 0 20px;
-  text-align: left;
-  overflow: auto;
-  -webkit-mask-image: -webkit-gradient(linear, left 10%, left top, from(rgba(0,0,0,1)), to(rgba(0,0,0,0))); 
+#sf-full-1 .right h2 {
+  border-bottom: 2px solid #007c99;
+  padding: 5px;
+  margin: 0px;
 }
 
-#lightbox .lower .description {
-  padding: 10px 0;
+.view-id-social_forces2 .mpic {
+  position: absolute;
+  right: 18px;
+  bottom: 0;
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+  z-index:0;
+}
+
+.view-id-social_forces2 .accordion {
+  border: 1px solid #F1F2F4;
+  padding: 9px;
+}
+
+.view-id-social_forces2 .accordion > div {
+  border-bottom: 2px dashed #F1F2F4;
+  padding: 9px;
+  background-color: #F0F0F5;
+}
+
+.view-id-social_forces2 h3 {
+  /*background: #007c99;*/
+  border-bottom: 1px solid #F1F2F4;
+  padding: 2px;
+  margin:1px 0;
+  cursor: hand; 
+  cursor: pointer;
+  text-transform: capitalize;
 }
 

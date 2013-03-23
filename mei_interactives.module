@@ -28,16 +28,3 @@ function _mei_interactives_insert_after_first_element(&$a, $element) {
   }
 }
 
-/**
- * Implementation of hook_preproccess().
- */
-
-function mei_interactives_preprocess_page(&$vars) {
-  //Check for content types that are specified as interactives
-  
-
-  //add specialized tpl for the interactive
- 
-}
-
-

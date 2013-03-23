@@ -22,7 +22,7 @@ function mei_social_forces_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Social Forces';
+  $handler->display->display_options['title'] = 'Social Forces You Need to Know';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -229,7 +229,7 @@ function mei_social_forces_views_default_views() {
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
-  $handler->display->display_options['path'] = 'social-forces2';
+  $handler->display->display_options['path'] = 'transitions/social-forces';
   $export['social_forces2'] = $view;
 
   return $export;

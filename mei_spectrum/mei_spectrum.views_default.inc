@@ -22,7 +22,7 @@ function mei_spectrum_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Political Spectrum';
+  $handler->display->display_options['title'] = 'The Political Landscape in Egypt Today';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -114,50 +114,7 @@ function mei_spectrum_views_default_views() {
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
-  $handler->display->display_options['path'] = 'political-parties';
-
-  /* Display: Block */
-  $handler = $view->new_display('block', 'Block', 'full');
-  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
-  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
-  $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['style_options']['row_class'] = 'full';
-  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
-  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
-  $handler->display->display_options['defaults']['style_options'] = FALSE;
-  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
-  $handler->display->display_options['row_plugin'] = 'fields';
-  $handler->display->display_options['defaults']['row_options'] = FALSE;
-  $handler->display->display_options['defaults']['footer'] = FALSE;
-  $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Title */
-  $handler->display->display_options['fields']['title']['id'] = 'title';
-  $handler->display->display_options['fields']['title']['table'] = 'node';
-  $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
-  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Content: Logo */
-  $handler->display->display_options['fields']['field_pp_logo']['id'] = 'field_pp_logo';
-  $handler->display->display_options['fields']['field_pp_logo']['table'] = 'field_data_field_pp_logo';
-  $handler->display->display_options['fields']['field_pp_logo']['field'] = 'field_pp_logo';
-  $handler->display->display_options['fields']['field_pp_logo']['label'] = '';
-  $handler->display->display_options['fields']['field_pp_logo']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_pp_logo']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_pp_logo']['settings'] = array(
-    'image_style' => 'thumbnail',
-    'image_link' => '',
-  );
-  /* Field: Content: Issue */
-  $handler->display->display_options['fields']['field_pp_issue']['id'] = 'field_pp_issue';
-  $handler->display->display_options['fields']['field_pp_issue']['table'] = 'field_data_field_pp_issue';
-  $handler->display->display_options['fields']['field_pp_issue']['field'] = 'field_pp_issue';
-  $handler->display->display_options['fields']['field_pp_issue']['type'] = 'field_collection_fields';
-  $handler->display->display_options['fields']['field_pp_issue']['settings'] = array(
-    'view_mode' => 'full',
-  );
-  $handler->display->display_options['fields']['field_pp_issue']['delta_offset'] = '0';
-  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  $handler->display->display_options['path'] = 'transitions/political-parties';
   $export['political_parties'] = $view;
 
   return $export;

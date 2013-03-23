@@ -31,11 +31,11 @@ function mei_social_forces_views_api() {
 function mei_social_forces_image_default_styles() {
   $styles = array();
 
-  // Exported image style: sf2_internal.
-  $styles['sf2_internal'] = array(
-    'name' => 'sf2_internal',
+  // Exported image style: sf_internal.
+  $styles['sf_internal'] = array(
+    'name' => 'sf_internal',
     'effects' => array(
-      7 => array(
+      2 => array(
         'label' => 'Scale and crop',
         'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
         'effect callback' => 'image_scale_and_crop_effect',
@@ -53,11 +53,11 @@ function mei_social_forces_image_default_styles() {
     ),
   );
 
-  // Exported image style: sf2_main.
-  $styles['sf2_main'] = array(
-    'name' => 'sf2_main',
+  // Exported image style: sf_main.
+  $styles['sf_main'] = array(
+    'name' => 'sf_main',
     'effects' => array(
-      6 => array(
+      1 => array(
         'label' => 'Scale and crop',
         'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
         'effect callback' => 'image_scale_and_crop_effect',

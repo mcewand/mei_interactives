@@ -25,6 +25,7 @@ function mei_spectrum_field_group_info() {
     'children' => array(
       0 => 'field_pp_coalitions',
       1 => 'field_pp_commentary',
+      2 => 'field_pp_coalition_link',
     ),
     'format_type' => 'tab',
     'format_settings' => array(

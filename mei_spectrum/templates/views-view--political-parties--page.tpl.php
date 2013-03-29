@@ -103,6 +103,14 @@
             </div>
           <?php endif; ?>
 
+         <?php if (isset($full['coalition'])): ?>
+            <h2>Coalition Participation</h2> 
+            <div class='figures accordion'>
+                <h3>Commentary</h3>
+                <div class='description'><?php print $full['coalition']['description']; ?></div>
+            </div>
+          <?php endif; ?> 
+
           <?php if (isset($full['figures'])): ?>
             <h2>Key Figures</h2> 
             <div class='figures accordion'>

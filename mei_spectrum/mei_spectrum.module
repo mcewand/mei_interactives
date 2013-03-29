@@ -59,13 +59,11 @@ function mei_spectrum_preprocess_views_view(&$vars) {
     // pare down for display
     $spectrum = array();
     foreach ($nodes as $node) {
-  // dpm($node);
       $spectrum[$node->nid]['title'] = $node->title; 
       if (isset($node->body[$node->language])) {
         $spectrum[$node->nid]['description'] = $node->body[$node->language][0]['safe_value'];
       }
       if (isset($node->field_pp_logo[$node->language])) {
-        //$spectrum[$node->nid]['logo'] = file_create_url($node->field_pp_logo[$node->language][0]['uri']);
         $spectrum[$node->nid]['logo'] = image_style_url('pp_main', $node->field_pp_logo[$node->language][0]['uri']);
       }
       if (isset($node->field_pp_founded[$node->language])) {
@@ -77,6 +75,13 @@ function mei_spectrum_preprocess_views_view(&$vars) {
           $spectrum[$node->nid]['sources'][] = $source['url'];
         }
       }
+
+      //add coalition information
+      if (isset($node->field_pp_commentary[$node->language])) {
+                
+        $spectrum[$node->nid]['coalition']['description'] = $node->field_pp_commentary[$node->language][0]['safe_value'];
+      }
+
       //add issues
       if (isset($node->spectrum_field_pp_issue)) {
         foreach ($node->spectrum_field_pp_issue as $issue) { 
@@ -92,6 +97,7 @@ function mei_spectrum_preprocess_views_view(&$vars) {
           $spectrum[$node->nid]['figures'][] = array(
             'name' => $figure->field_pp_figure_name[$node->language][0]['value'],
             'description' => $figure->field_pp_figure_description[$node->language][0]['value'],
+            //'image' => image_style_url('thumbnail', $figure->field_pp_figure_image[$node->language][0]['uri']),
           ); 
         }
       }
@@ -103,6 +109,7 @@ function mei_spectrum_preprocess_views_view(&$vars) {
             'author' => $quote->field_pp_quote_author[$node->language][0]['value'],
             'quotation' => $quote->field_pp_quote_quotation[$node->language][0]['value'],
             'description' => $quote->field_pp_quote_description[$node->language][0]['value'],
+            //'image' => image_style_url('thumbnail', $quote->field_pp_quote_image[$node->language][0]['uri']),
           ); 
         }
       }
@@ -110,7 +117,6 @@ function mei_spectrum_preprocess_views_view(&$vars) {
     }
 
     $vars['spectrum'] = $spectrum;
-
 
   }
 }

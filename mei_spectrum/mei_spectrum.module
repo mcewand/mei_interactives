@@ -81,8 +81,10 @@ function mei_spectrum_preprocess_views_view(&$vars) {
       if (isset($node->field_pp_coalitions[$node->language])) {
         foreach ($node->field_pp_coalitions[$node->language] as $coalition) {  
           $term = taxonomy_term_load($coalition['target_id']);
-          $spectrum[$node->nid]['coalition']['name'][] = $term->name;
-        }
+	  if ($term) {
+            $spectrum[$node->nid]['coalition']['name'][] = $term->name;
+          }
+	}
       }
 
       if (isset($node->field_pp_commentary[$node->language])) {

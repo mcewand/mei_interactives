@@ -105,9 +105,31 @@
 
          <?php if (isset($full['coalition'])): ?>
             <h2>Coalition Participation</h2> 
-            <div class='figures accordion'>
+            <div class='coalition accordion'>
+              <?php if (isset($full['coalition']['name'])): ?>
+                <h3>Membership</h3>
+                <div class='coalition-membership'>
+                  <ul>
+                    <?php foreach ($full['coalition']['name'] as $name): ?>
+                      <li><?php print $name; ?></li>
+                    <?php endforeach; ?>
+                  </ul>
+                </div>
+              <?php endif; ?>
+              <?php if (isset($full['coalition']['description'])): ?>
                 <h3>Commentary</h3>
                 <div class='description'><?php print $full['coalition']['description']; ?></div>
+              <?php endif; ?>
+              <?php if (isset($full['coalition']['links'])): ?>
+                <h3>Read More</h3>
+                <div class='read-more'>
+                  <ul>
+                    <?php foreach ($full['coalition']['links'] as $link): ?>
+                      <li><a href="<?php print $link['url']; ?>"><?php print $link['title']; ?></a></li>
+                    <?php endforeach; ?>
+                  </ul>
+                </div>
+              <?php endif; ?>
             </div>
           <?php endif; ?> 
 

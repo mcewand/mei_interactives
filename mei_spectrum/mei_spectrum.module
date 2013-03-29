@@ -59,6 +59,7 @@ function mei_spectrum_preprocess_views_view(&$vars) {
     // pare down for display
     $spectrum = array();
     foreach ($nodes as $node) {
+//dpm($node);
       $spectrum[$node->nid]['title'] = $node->title; 
       if (isset($node->body[$node->language])) {
         $spectrum[$node->nid]['description'] = $node->body[$node->language][0]['safe_value'];
@@ -77,10 +78,22 @@ function mei_spectrum_preprocess_views_view(&$vars) {
       }
 
       //add coalition information
+      if (isset($node->field_pp_coalitions[$node->language])) {
+        foreach ($node->field_pp_coalitions[$node->language] as $coalition) {  
+          $term = taxonomy_term_load($coalition['target_id']);
+          $spectrum[$node->nid]['coalition']['name'][] = $term->name;
+        }
+      }
+
       if (isset($node->field_pp_commentary[$node->language])) {
-                
         $spectrum[$node->nid]['coalition']['description'] = $node->field_pp_commentary[$node->language][0]['safe_value'];
       }
+      if (isset($node->field_pp_coalition_link[$node->language])) {
+	      foreach ($node->field_pp_coalition_link[$node->language] as $link) {
+          $spectrum[$node->nid]['coalition']['links'][] = $link;
+        }
+      }
+
 
       //add issues
       if (isset($node->spectrum_field_pp_issue)) {

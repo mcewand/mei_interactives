@@ -9,17 +9,32 @@
         var offset = 0;
         var count = 0;
         var windowRow = 1;
-
+        var mobile = 0;
+       
        $('.container').each(function () {
 
            //get offset            
            offset = $(this).offset().left;
-           if(count > 0 && offset == first)
+           
+           //if(count > 0 && offset == first)
+           if (count == 2 && offset == first)
            {
-              //add display window after first break
+              //add display window after first break on mobile layout
               $('.view-social-forces2 .container:nth-child(' + count + ')').after('<div id="sf-full-'+  windowRow + '"><div class="sf-close">close</div><div id="inner"></div></div>');
               windowRow++;
+              mobile = 1;
+           } 
+           if (count == 4 && mobile == 0) {
+              $('.view-social-forces2 .container:nth-child(' + count + ')').css('clear', 'left');
+              $('.view-social-forces2 .container:nth-child(' + count + ')').before('<div id="sf-full-'+  windowRow + '" style="clear:left;"><div class="sf-close">close</div><div id="inner"></div></div>');
+              windowRow++;
+
            }
+           if (count == 7 && mobile == 0) {
+              $('.view-social-forces2 .container:nth-child(' + (count + 1) + ')').css('clear', 'left');
+           }           
+
+
            count++;
         }); 
 

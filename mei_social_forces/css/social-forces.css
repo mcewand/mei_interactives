@@ -4,6 +4,7 @@
   margin:5px;
   height: 160px;
   float:left;
+  /*display: inline-block;*/
   position: relative;
   overflow: hidden;
   border: 1px solid #F1F2F4;;
@@ -92,7 +93,7 @@
 }
 
 #sf-full-1 .left .accordion ul {
-  padding: 0 0 0.25em 1em;
+  padding: 0 0 0.25em 0;
   
 }
 
@@ -127,6 +128,10 @@
   background-color: #F0F0F5;
 }
 
+.view-id-social_forces2 .accordion a {
+  word-wrap:break-word;
+}
+
 .view-id-social_forces2 h3 {
   /*background: #007c99;*/
   border-bottom: 1px solid #F1F2F4;
@@ -137,3 +142,10 @@
   text-transform: capitalize;
 }
 
+.view-id-social_forces .clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
